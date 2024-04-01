@@ -1,0 +1,28 @@
+{
+  "name": "playable-factory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --hot --no-live-reload --mode development --config webpack.config.js",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.9.3"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "fs": "^0.0.1-security",
+    "gsap": "^3.12.1",
+    "html-webpack-plugin": "^5.5.3",
+    "matter-js": "^0.19.0",
+    "pixi.js": "^7.3.1",
+    "webpack-bundle-analyzer": "^4.9.0",
+    "word-list": "^3.1.0",
+    "word-list-json": "^0.2.0",
+    "wordlist-english": "^1.2.1"
+  }
+}

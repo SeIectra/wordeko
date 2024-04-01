@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordeko from Ardeko</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      overflow: hidden;
+      background: #1e1e37;
+    }
+
+    #logo {
+      width: 100%;
+      max-width: 150px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    #bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('./assets/core/pattern.png') repeat center center fixed;
+    }
+
+    #title, #subtitle {
+      position: absolute;
+      left: 50%;
+      font-family: 'Montserrat', sans-serif;
+      color: cyan;
+      text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+    }
+
+    #title {
+      top: 100px; /* Adjusted position */
+      font-size: 72px;
+      font-weight: bold;
+      animation: danceTitle 3s infinite alternate;
+    }
+
+    #subtitle {
+      top: 200px; /* Adjusted position */
+      font-size: 24px;
+      animation: danceSubtitle 3s infinite alternate;
+    }
+
+    @keyframes danceTitle {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(-45%); }
+    }
+
+    @keyframes danceSubtitle {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(-55%); }
+    }
+    
+    #play-again-btn {
+      display: none; /* Initially hide the button */
+      position: absolute;
+      top: 250px; /* Adjust button position */
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 30px;
+      font-size: 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    #play-again-btn:hover {
+      background-color: #45a049;
+      transform: translateX(-50%) translateY(-5%);
+    }
+  </style>
+</head>
+<body>
+  <div id="bg"></div>
+  <img id="logo" src="./assets/core/logo_white.png" alt="Wordeko Logo">
+  <div id="title">Wordeko</div>
+  <div id="subtitle">from Ardeko</div>
+  <div id="play-again-btn" onclick="restartGame()">Play Again</div>
+  <audio id="bgMusic" autoplay loop>
+    <source src="./assets/bgmus.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="index.js"></script>
+  <!-- Ensure game.js is correctly referenced -->
+  <!-- <script src="game.js"></script> -->
+</body>
+</html>
